@@ -1,1 +1,252 @@
-This site is currently in progress. Come back later to see why rox r lyfe
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ROX4LYFE</title>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Audiowide">
+    <style>
+      body {
+  font-family: Audiowide;
+}
+#rox-info {
+  text-align: justify;
+  font-size: 37px;
+  margin-top: 1px;
+  margin-bottom: 0px;
+}
+#image-rock-cycle {
+  width: 105%;
+  margin-left: 0px;
+}
+#menu-bottom {
+  position:absolute;
+  bottom: 0px;
+}
+#rox-types {
+  position:relative;
+  display:block;
+  min-height: 55vw;
+}
+#img-rox-types {
+  width: 100%;
+}
+#rox-buttons {
+  position:absolute;
+  display: inline;
+  bottom: 0px;
+  width: 100%;
+}
+#image-stop-motion {
+  width:100%;
+}
+#image-rox-types {
+  width:100%;
+}
+.menu-button {
+  width: 23.25%;
+  height:80px;
+  background-color: #00D358;
+  margin-right: 0px;
+  border: none;
+}
+#button-stop-motion {
+  width:25%;
+}
+.rock-button {
+  display: inline;
+  background-color: #80e5ff;
+  border:none;
+  width:33%;
+  height: 90px;
+}
+.arrow-button {
+  display:inline;
+  width: 48%;
+  height: 60px;
+  background-color:#ff3333;
+  border:none;
+}
+.arrow-image {
+  width:40%;
+}
+.cycle-info {
+  position:absolute;
+  text-align:justify;
+  left: 55%;
+  top:25%;
+  margin-right: 15px;
+  margin-top: 0.5px;
+  font-size: 36px;
+}
+#arrow-buttons {
+  left:55%;
+  top:75%;
+  position:absolute;
+}
+#igneous-info {
+  font-size: 36px;
+  text-align: justify;
+}
+#sedimentary-info {
+  font-size: 28px;
+  text-align: justify;
+}
+#metamorphic-info {
+  font-size: 36px;
+  text-align: justify;
+}
+button:hover {
+  background-image: url("http://media.giphy.com/media/kkoRgXbTCPY3K/giphy.gif");
+}
+    </style>
+    <script type="text/javascript">
+      var scween = 0;
+var rockContent = 0;
+var rockCycle = 0;
+function ge(t) {
+  return document.getElementById(t);
+}
+function show(me) {
+  ge(me).style.display = "inline";
+  if(me == "rox-types") ge(me).style.display = "block";
+  if(me == "igneous-info")ge(me).style.display = "block";
+  if(me == "metamorphic-info")ge(me).style.display = "block";
+  if(me == "sedimentary-info")ge(me).style.display = "block";
+}
+function hide(me) {
+  ge(me).style.display = "none";
+}
+function onClick(e,f) {
+  ge(e).addEventListener('click',f);
+}
+setInterval(function() {
+  hide("cycle-info-0");
+  hide("cycle-info-1");
+  hide("cycle-info-2");
+  hide("cycle-info-3");
+  hide("cycle-info-4");
+  hide("cycle-info-5");
+  hide("cycle-info-6");
+  hide("cycle-info-7");
+  hide("cycle-info-8");
+  hide("cycle-info-9");
+  hide("rox-what");
+  hide("rox-buttons");
+  hide("rox-types");
+  hide("rox-cycle");
+  hide("rox-stop-motion");
+  hide("igneous-info");
+  hide("sedimentary-info");
+  hide("metamorphic-info");
+  if(scween==0)show("rox-what");
+  if(scween==1)show("rox-types");
+  if(scween==1)show("rox-buttons");
+  if(scween==2)show("rox-cycle");
+  if(scween==3)show("rox-stop-motion");
+  if(rockContent==0)show("igneous-info");
+  if(rockContent==1)show("sedimentary-info");
+  if(rockContent==2)show("metamorphic-info");
+  show("cycle-info-" + rockCycle.toString());
+});
+onClick("button-main",function(){scween=0});
+onClick("button-rox-type",function(){scween=1});
+onClick("button-rox-cycle",function(){scween=2});
+onClick("button-stop-motion",function(){scween=3});
+onClick("button-igneous",function(){rockContent=0});
+onClick("button-sedimentary",function(){rockContent=1});
+onClick("button-metamorphic",function(){rockContent=2});
+onClick("button-left",function(){rockCycle--;if(rockCycle < 0)rockCycle= 10});
+onClick("button-right",function(){rockCycle++;if(rockCycle>9)rockCycle=0});
+    </script>
+  </head>
+  <body>
+    <div id="rox-what">
+        <img id="rox-title-img" src="http://s23.postimg.org/scvugxvq1/wazzarock.gif" width="100%"><hr><!-- what are rox-->
+        <p id="rox-info">A rock is a naturally occurring mixture of different minerals that is solid. Some examples of rocks are granite, coal, limestone, and basalt. There are three different categories of rock: Igneous, Sedimentary, and Metamorphic. Igneous rock occurs when lava cools down and hardens. Pumice is an example of this. Then when a rock erodes away, it turns into sediment. When the sediment is compressed and cemented, it turns into Sedimentary Rock. Limestone is an example of Sedimentary Rock. When the rock is exposed to intense heat and pressure, it turns into Metamorphic Rock. Quartzite is a Metamorphic Rock.</p>
+    </div>
+    <div id="rox-types">
+      <img src="http://s23.postimg.org/6rqrtbyzd/typezorox.gif" id="img-rox-types"><hr>
+      <p id="igneous-info">
+        Igneous rocks are formed when magma or lava cools and hardens. For a rock to cool, the temperature has to be below 1,202 degrees Fahrenheit. There are 2 types of igneous rocks. Intrusive/Plutonic Igneous Rock is formed by magma that slowly cools below the earth's surface, allowing for large crystals to form. Extrusive/Volcanic Igneous Rock is formed by lava that quickly cools on the earth's surface, not allowing for many crystals to form.
+      </p>
+      <p id="sedimentary-info">
+        Sedimentary rock is formed when sediments made during erosion are turned into rock through lithification. There are two different methods of lithification. Compaction occurs when layers of sediment build up on top of each other. Over time, the weight and pressure of the layers forces them together, forming a solid rock. Additionally, cementation occurs when dissolved minerals squeeze into the spaces in between sediments. The minerals act as a natural glue for the sediment, and keep it together. There are 3 types of sedimentary rock. Clastic Sedimentary Rock, the most common type, is made up of pieces of rocks that have been weathered away. Chemical Sedimentary Rock is made up of the dissolved minerals that come out of a solution. Organic sedimentary rock is formed from the remains of dead organisms.
+      </p>
+      <p id="metamorphic-info">
+        Metamorphic rocks are formed from existing rock that has been transformed due to intense heat or pressure. There are two different methods of forming metamorphic rocks. Contact metamorphism occurs when a rock is exposed to intense heat from magma. Regional metamorphism occurs due to intense pressure. One reason is because of colliding tectonic plates. There are 2 types of metamorphic rocks. Foliated rocks have parallel layers or bands of minerals. Nonfoliated rocks have no layers or bands.
+      </p>
+      <div id="rox-buttons">
+        <button id="button-igneous" class="rock-button">
+          <img src="http://s23.postimg.org/x6fllss7t/Igneous.gif">
+        </button>
+        <button id="button-sedimentary" class="rock-button">
+          <img style="width:97%" src="http://s23.postimg.org/42rdpk449/Sedimentary.gif">
+        </button>
+        <button id="button-metamorphic" class="rock-button">
+          <img src="http://s23.postimg.org/a2f4t7owp/Metamorphic.gif">
+        </button>
+      </div>
+    </div>
+    <div id="rox-cycle" style="width:100%">
+      <img src="http://s23.postimg.org/9n3v072zd/roxluvdemunicyclezzzz.gif" style="width:100%">
+      <hr>
+      <img src="http://s8.postimg.org/5f0g0iwz7/Screen_Shot_2016_02_15_at_8_08_54_PM.png" style="width:54%;display:inline">
+      <p id="cycle-info-0" class="cycle-info">
+        The rock's temperature is above 1,202 degress Fahrenheit and is now magma/lava.
+      </p>
+      <p id="cycle-info-1" class="cycle-info">
+        The rock either slowly cools under the earth's surface or rapidly cools on top.
+      </p>
+      <p id="cycle-info-2" class="cycle-info">
+        The rock is now an igneous rock. It has crystals based on how quickly it cooled.
+      </p>
+      <p id="cycle-info-3" class="cycle-info">
+        Water and wind start to break down the rock into small sediments.
+      </p>
+      <p id="cycle-info-4" class="cycle-info">
+        The rock now has broken down into sediments. The sediments can have different sizes.
+      </p>
+      <p id="cycle-info-5" class="cycle-info">
+        As the sediments stack, they start compacted and cementing together.
+      </p>
+      <p id="cycle-info-6" class="cycle-info">
+        The rock is now sedimentary rock. It will look different based on the sediment that was used.
+      </p>
+      <p id="cycle-info-7" class="cycle-info">
+        As the rock starts going near the earth's surface, it is exposed to heat and pressure.
+      </p>
+      <p id="cycle-info-8" class="cycle-info">
+        Through metamorphism, the rock is now a metamorphic rock.
+      </p>
+      <p id="cycle-info-9" class="cycle-info">
+        The rock gets into the earth's surface and starts melting back into magma.
+      </p>
+      <div id="arrow-buttons">
+        <button id="button-left" class="arrow-button">
+          <img class="arrow-image" src="http://s16.postimg.org/4gfo6xio3/Untitled.png">
+        </button>
+        <button id="button-right" class="arrow-button">
+          <img class="arrow-image" src="https://cloud.githubusercontent.com/assets/10279512/11770514/8fbd0ce6-a1b4-11e5-827d-26b330b97af2.png">
+        </button>
+      </div>
+    </div>
+    <div id="rox-stop-motion">
+      <p>Stop motion created by Vayun Tiwari and Nicole Tian.</p>
+    </div>
+    <div id="menu-bottom">
+      <hr>
+      <button class="menu-button" id="button-main">
+        <img id="image-menu" src="http://s23.postimg.org/ni25inxeh/Menu.gif">
+      </button>
+      <button class="menu-button" id="button-rox-type">
+        <img id="image-rox-types" src="http://s23.postimg.org/bzbuxsfkp/rocktypes.gif">
+      </button>
+      <button class="menu-button" id="button-rox-cycle">
+        <img id="image-rock-cycle" src="http://s23.postimg.org/hyzm1g0d5/rockcycle.gif">
+      </button>
+      <button class="menu-button" id="button-stop-motion">
+        <img id="image-stop-motion" src="http://s23.postimg.org/ql2df4ixl/Stop_Motion.gif">
+      </button>
+    </div>
+    <script src="background.js" type="text/javascript"></script>
+  </body>
+</html>
