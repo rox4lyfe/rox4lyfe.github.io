@@ -98,65 +98,6 @@ button:hover {
   background-image: url("http://media.giphy.com/media/kkoRgXbTCPY3K/giphy.gif");
 }
     </style>
-    <script type="text/javascript">
-      var scween = 0;
-var rockContent = 0;
-var rockCycle = 0;
-function ge(t) {
-  return document.getElementById(t);
-}
-function show(me) {
-  ge(me).style.display = "inline";
-  if(me == "rox-types") ge(me).style.display = "block";
-  if(me == "igneous-info")ge(me).style.display = "block";
-  if(me == "metamorphic-info")ge(me).style.display = "block";
-  if(me == "sedimentary-info")ge(me).style.display = "block";
-}
-function hide(me) {
-  ge(me).style.display = "none";
-}
-function onClick(e,f) {
-  ge(e).addEventListener('click',f);
-}
-setInterval(function() {
-  hide("cycle-info-0");
-  hide("cycle-info-1");
-  hide("cycle-info-2");
-  hide("cycle-info-3");
-  hide("cycle-info-4");
-  hide("cycle-info-5");
-  hide("cycle-info-6");
-  hide("cycle-info-7");
-  hide("cycle-info-8");
-  hide("cycle-info-9");
-  hide("rox-what");
-  hide("rox-buttons");
-  hide("rox-types");
-  hide("rox-cycle");
-  hide("rox-stop-motion");
-  hide("igneous-info");
-  hide("sedimentary-info");
-  hide("metamorphic-info");
-  if(scween==0)show("rox-what");
-  if(scween==1)show("rox-types");
-  if(scween==1)show("rox-buttons");
-  if(scween==2)show("rox-cycle");
-  if(scween==3)show("rox-stop-motion");
-  if(rockContent==0)show("igneous-info");
-  if(rockContent==1)show("sedimentary-info");
-  if(rockContent==2)show("metamorphic-info");
-  show("cycle-info-" + rockCycle.toString());
-});
-onClick("button-main",function(){scween=0});
-onClick("button-rox-type",function(){scween=1});
-onClick("button-rox-cycle",function(){scween=2});
-onClick("button-stop-motion",function(){scween=3});
-onClick("button-igneous",function(){rockContent=0});
-onClick("button-sedimentary",function(){rockContent=1});
-onClick("button-metamorphic",function(){rockContent=2});
-onClick("button-left",function(){rockCycle--;if(rockCycle < 0)rockCycle= 10});
-onClick("button-right",function(){rockCycle++;if(rockCycle>9)rockCycle=0});
-    </script>
   </head>
   <body>
     <div id="rox-what">
@@ -247,6 +188,64 @@ onClick("button-right",function(){rockCycle++;if(rockCycle>9)rockCycle=0});
         <img id="image-stop-motion" src="http://s23.postimg.org/ql2df4ixl/Stop_Motion.gif">
       </button>
     </div>
-    <script src="background.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var scween = 0;
+var rockContent = 0;
+var rockCycle = 0;
+function ge(t) {
+  return document.getElementById(t);
+}
+function show(me) {
+  ge(me).style.display = "inline";
+  if(me == "rox-types") ge(me).style.display = "block";
+  if(me == "igneous-info")ge(me).style.display = "block";
+  if(me == "metamorphic-info")ge(me).style.display = "block";
+  if(me == "sedimentary-info")ge(me).style.display = "block";
+}
+function hide(me) {
+  ge(me).style.display = "none";
+}
+function onClick(e,f) {
+  ge(e).addEventListener('click',f);
+}
+setInterval(function() {
+  hide("cycle-info-0");
+  hide("cycle-info-1");
+  hide("cycle-info-2");
+  hide("cycle-info-3");
+  hide("cycle-info-4");
+  hide("cycle-info-5");
+  hide("cycle-info-6");
+  hide("cycle-info-7");
+  hide("cycle-info-8");
+  hide("cycle-info-9");
+  hide("rox-what");
+  hide("rox-buttons");
+  hide("rox-types");
+  hide("rox-cycle");
+  hide("rox-stop-motion");
+  hide("igneous-info");
+  hide("sedimentary-info");
+  hide("metamorphic-info");
+  if(scween==0)show("rox-what");
+  if(scween==1)show("rox-types");
+  if(scween==1)show("rox-buttons");
+  if(scween==2)show("rox-cycle");
+  if(scween==3)show("rox-stop-motion");
+  if(rockContent==0)show("igneous-info");
+  if(rockContent==1)show("sedimentary-info");
+  if(rockContent==2)show("metamorphic-info");
+  show("cycle-info-" + rockCycle.toString());
+});
+onClick("button-main",function(){scween=0});
+onClick("button-rox-type",function(){scween=1});
+onClick("button-rox-cycle",function(){scween=2});
+onClick("button-stop-motion",function(){scween=3});
+onClick("button-igneous",function(){rockContent=0});
+onClick("button-sedimentary",function(){rockContent=1});
+onClick("button-metamorphic",function(){rockContent=2});
+onClick("button-left",function(){rockCycle--;if(rockCycle < 0)rockCycle= 10});
+onClick("button-right",function(){rockCycle++;if(rockCycle>9)rockCycle=0});
+    </script>
   </body>
 </html>
